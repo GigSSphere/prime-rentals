@@ -1,9 +1,13 @@
-import Image from "next/image";
+import Banner from "./components/Banner";
+import Categories from "./components/Categories";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      prime Rentals
-    </main>
+    <div className="flex flex-col">
+      <Navbar />
+      <Banner />
+      <Categories />
+    </div>
   );
 }
