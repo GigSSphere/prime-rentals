@@ -1,12 +1,12 @@
-import React from "react";
-import { FaWhatsapp, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+"use client";
+import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 p-4 w-full">
+    <footer className="w-full bg-gray-800 p-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <div className="flex space-x-2 sm:space-x-4">
-          <a href="#" className="text-xl text-green-500 sm:text-2xl">
+          <a href="#" className="text-xl text-green-500 sm:text-2xl md:hover:mb-1">
             <FaWhatsapp />
           </a>
           <a href="#" className="text-xl text-pink-600 sm:text-2xl">

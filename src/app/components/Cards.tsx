@@ -64,14 +64,13 @@ const Cards: React.FC<Props> = ({ item }) => {
           <img className="rounded-t-lg" src={item.img} alt="" />
 
           <div className="p-5">
-            <a href="#">
-              <h4 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                {item.title}
-              </h4>
-              <h6 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                ₹{item.price}
-              </h6>
-            </a>
+            <h4 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {item.title}
+            </h4>
+            <h6 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              ₹{item.price}
+            </h6>
+
             <p className="font-normal text-gray-700 dark:text-gray-400">
               {item.address}
             </p>

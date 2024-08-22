@@ -1,3 +1,4 @@
+"use client"
 import { Item, property } from "../Utils/CardsList";
 import Cards from "./Cards";
 
