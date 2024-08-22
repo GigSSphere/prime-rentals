@@ -1,27 +1,21 @@
-import React from 'react'
-import { house } from '../Utils/CardsList';
-import Cards from './Cards';
+import { Item, property } from "../Utils/CardsList";
+import Cards from "./Cards";
 
-const Houses = () => {
+const Flats = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 gap-3 md:grid-cols-4">
-        {house.map((item) => (
-          <Cards
-            key={item.id}
-            img={
-              "https://psgroup.in/blog/wp-content/uploads/2021/01/Navyom-Living-dining.jpg"
-            }
-            title={item.title}
-            price={item.price}
-            address={item.address}
-            size={item.size}
-            number={item.phoneNumber}
-          />
-        ))}
+        {property
+          .filter((item: Item) => item.title === "House")
+          .map((item: Item) => (
+            <Cards
+              key={item.id} // Ensure each item has a unique 'id'
+              item={item} // Pass the entire item as 'item'
+            />
+          ))}
       </div>
     </div>
   );
-}
+};
 
-export default Houses
+export default Flats;

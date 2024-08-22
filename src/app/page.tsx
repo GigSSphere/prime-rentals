@@ -6,6 +6,7 @@ import Flats from "./components/Flats";
 import Houses from "./components/Houses";
 import Navbar from "./components/Navbar";
 import Pgs from "./components/Pgs";
+import Footer from "./components/Footer";
 
 function Home() {
   const [flat, setFlat] = useState<Boolean>(true);
@@ -14,6 +15,8 @@ function Home() {
 
   function handlehouseclick(): void {
     setHouse(true);
+    setFlat(false);
+    setPg(false);
   }
 
   function handlepgclick(): void {
@@ -35,12 +38,12 @@ function Home() {
         flat={handleflatclick}
         house={handlehouseclick}
         pg={handlepgclick}
-        
       />
       {house && <Houses />}
       {flat && <Flats />}
       {pg && <Pgs />}
-      {!house && !flat && !pg && <Flats />}
+      {!house && !flat && !pg && <  Flats />}
+      <Footer/>
     </div>
   );
 }
